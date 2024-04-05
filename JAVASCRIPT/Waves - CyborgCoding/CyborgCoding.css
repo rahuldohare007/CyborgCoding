@@ -1,0 +1,82 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #404e5c;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+header {
+  display: block;
+  position: relative;
+  width: 55vw;
+  height: 20vw;
+}
+
+h1,
+span.copy {
+  font-family: "Lilita One", cursive;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+  font-size: 20vw;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  line-height: 1;
+  height: 20vw;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #e7e7e7;
+  z-index: 50;
+}
+
+.copy-1 {
+  transform: perspective(500px) translate3d(0, 0, -15px);
+  color: #f24c00;
+  z-index: 40;
+}
+
+.copy-2 {
+  transform: perspective(500px) translate3d(0, 0, -30px);
+  color: #9792e3;
+  z-index: 30;
+}
+
+.copy-3 {
+  transform: perspective(500px) translate3d(0, 0, -45px);
+  color: #fc7a1e;
+  z-index: 20;
+}
+
+.copy-4 {
+  transform: perspective(500px) translate3d(0, 0, -60px);
+  color: #eda96d;
+  z-index: 10;
+}
+
+.about {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 0.8em;
+  margin: 0.5em;
+}
+
+.about a {
+  text-underline-offset: 2px;
+  color: #fff;
+  font-family: sans-serif;
+}
