@@ -1,0 +1,54 @@
+.container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveTriangle 4s infinite linear,
+        changeColor 4s infinite linear;
+    filter: drop-shadow (0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes moveTriangle {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        border-bottom-color: red;
+    }
+
+    25% {
+        border-bottom-color: blue;
+    }
+
+    50% {
+        border-bottom-color: green;
+    }
+
+    75% {
+        border-bottom-color: orange;
+    }
+
+    100% {
+        border-bottom-color: red;
+    }
+}
