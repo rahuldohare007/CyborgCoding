@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyborgCoding - It's Loading</title>
+  <style>
+    body {
+      background: #2d2d2d;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      position: relative;
+      color: #0000004d;
+      font-size: 60px
+    }
+    h1:before {
+      content: attr(data-text);
+      position: absolute;
+      overflow: hidden;
+      max-width: 7em;
+      white-space: nowrap;
+      color: #799f08;
+      animation: loading 8s linear;
+    }
+    @keyframes loading {
+      0% {
+        max-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 data-text="It's loading…">It's loading…</h1>
+</body>
+</html>
