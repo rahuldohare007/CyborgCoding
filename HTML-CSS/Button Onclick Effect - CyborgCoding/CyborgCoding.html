@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyborgCoding - Button Onclick Effect</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      height: 100vh;
+      place-items: center;
+    }
+    button {
+      padding: 15px 25px;
+      border: 1px solid black;
+      background-color: #ee82ee;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      transition: background-color linear .1s;
+
+      &:after {
+        content: "";
+        background-color: black;
+        left: 0;
+        top: 0;
+        transform: translate(2px, 2px);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        border-radius: 4px;
+        border: 1px solid black;
+      }
+
+      &:hover {
+        background-color: #d675d6;
+        left: 1px;
+        top: 1px;
+
+        &:after {
+          transform: translate(1px, 1px);
+        }
+      }
+
+      &:active {
+        background-color: #be68be;
+        left: 2px;
+        top: 2px;
+
+        &:after {
+          transform: translate(0px, 0px);
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button>Click Me</button>
+  </div>
+</body>
+</html>
