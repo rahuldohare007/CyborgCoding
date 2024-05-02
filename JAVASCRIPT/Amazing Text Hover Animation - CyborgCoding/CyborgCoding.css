@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+h2 {
+  position: relative;
+  font-size: 3rem;
+  font-family: poppins;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+h2 span {
+  color: #555;
+  transition: 0.25s;
+}
+
+h2:hover span {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0, 0 0 15px #0f0, 0 0 30px #0f0;
+}
