@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Geist";
+  src: url("https://pham.codes/d/GeistMonoVF.woff2") format("woff2");
+}
+
+html,
+body {
+  height: 100%;
+  background: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+p {
+  font-family: "Geist";
+  font-size: 100px;
+  margin: 0;
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  --wght-min: 32;
+  --wght-max: 240;
+}
+
+p > span {
+  animation: breath 1.5s alternate ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes breath {
+  0% {
+    font-variation-settings: "wght" var(--wght-min);
+  }
+
+  100% {
+    font-variation-settings: "wght" var(--wght-max);
+  }
+}
