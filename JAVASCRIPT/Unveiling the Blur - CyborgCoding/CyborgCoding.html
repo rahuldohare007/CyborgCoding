@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyborgCoding - Unveiling the Blur</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100svh;
+      background-color: #020816;
+      color: #d1d1d1;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      font-family: system-ui, sans-serif;
+    }
+
+    .filtered {
+      margin-block: 0.5rem;
+      width: 90%;
+      max-width: 800px;
+      font-size: 2rem;
+      line-height: 1.4;
+      font-weight: 300;
+      border: 1px solid #ffffff30;
+      padding: 2rem;
+      cursor: grab;
+    }
+
+    .filtered span {
+      filter: blur(7px);
+      transition: 300ms ease-in-out;
+    }
+
+    .filtered span:hover {
+      filter: blur(0);
+    }
+
+    .filtered span:has(+ span:hover),
+    .filtered span:hover+span {
+      filter: blur(2px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="filtered" class="filtered">
+    Blurry lines, uncertain sight,
+    In the haze, where shadows fight.
+  </div>
+  <script>
+    const container = document.getElementById("filtered");
+    const text = container.innerHTML;
+    const lines = text.split("<br>");
+    const html = lines.map(function (line) {
+      const words = line.trim().split(/\s+/);
+      const lineHtml = words.map(function (word) {
+        return `<span>${word}</span>`;
+      }).join(' ');
+      return `${lineHtml}<br>`;
+    }).join('');
+    container.innerHTML = html;
+  </script>
+</body>
+
+</html>
