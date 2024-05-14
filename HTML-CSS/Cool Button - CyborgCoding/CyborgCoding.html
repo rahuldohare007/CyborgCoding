@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyborgCoding - Cool Button</title>
+  <style>
+    @import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+    button.neumorphic {
+      container-type: inline-size;
+      aspect-ratio: 1/1;
+      border: 0.5rem solid transparent;
+      border-radius: 1rem;
+      color: hsl(0 0% 10%);
+      background: none;
+      display: grid;
+      place-content: center;
+      gap: 1rem;
+      --shadow:
+        -.5rem -.5rem 1rem #ffffffbf,
+        .5rem .5rem 1rem #80808080;
+      box-shadow: var(--shadow);
+      outline: none;
+      transition: all 0.1s;
+
+      &:hover,
+      &:focus-visible {
+        color: #19ace6;
+        scale: 1.1
+      }
+
+      &:active,
+      &.active {
+        box-shadow:
+          var(--shadow),
+          inset .5rem .5rem 1rem #80808080,
+          inset -.5rem -.5rem 1rem #ffffffbf;
+        color: #19ace6;
+
+        >i {
+          font-size: 28cqi
+        }
+
+        ;
+
+        >span {
+          font-size: 13cqi
+        }
+
+        ;
+      }
+
+      >i {
+        font-size: 31cqi;
+      }
+
+      >span {
+        font-family: system-ui, sans-serif;
+        font-size: 16cqi;
+      }
+    }
+
+    body {
+      background-color: #e5e9f4;
+      padding: 2.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 250px;
+    }
+
+    .buttons {
+      width: 400px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="buttons">
+    <button class="neumorphic active">
+      <i class="fa-light fa-fire"></i>
+      <span>Button A</span>
+    </button>
+    <button class="neumorphic">
+      <i class="fa-light fa-dna"></i>
+      <span>Button B</span>
+    </button>
+  </div>
+</body>
+
+</html>
