@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyborgCoding - Text Reveal</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      background-color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .box1,
+    .box2 {
+      width: 200px;
+      background-color: #000000;
+    }
+
+    h1 {
+      color: rgb(5, 127, 203);
+      text-shadow: 0px 0px 5px rgb(119, 116, 116);
+      font-family: sans-serif;
+      font-size: 50px;
+    }
+
+    .box1 {
+      z-index: 3;
+      animation: move1 3s forwards ease-in-out;
+      border-right: 2px solid rgb(9, 118, 207);
+    }
+
+    .box2 {
+      animation: move2 3s forwards ease-in-out;
+      border-left: 2px solid rgb(9, 118, 207);
+    }
+
+    @keyframes move1 {
+      from {
+        margin-right: -184px;
+      }
+
+      to {
+        margin-right: 0px;
+      }
+    }
+
+    @keyframes move2 {
+      from {
+        margin-left: -184px;
+      }
+
+      to {
+        margin-left: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1"></div>
+    <h1>CyborgCoding</h1>
+    <div class="box2"></div>
+  </div>
+</body>
+
+</html>
