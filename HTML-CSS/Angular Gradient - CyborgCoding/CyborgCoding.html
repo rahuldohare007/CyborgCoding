@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyborgCoding - Angular Gradient</title>
+  <style>
+    .spinner {
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+      margin: 0.5rem;
+      vertical-align: middle;
+    }
+    .spinner--play {
+      opacity: 1;
+    }
+    .spinner-div {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background: conic-gradient(white, transparent);
+      animation: loader-rotate 2s linear infinite;
+    }
+    .spinner.spinner--stop .spinner-div {
+      animation: none;
+    }
+    @keyframes loader-rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    html,
+    body {
+      background: black;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .spinner {
+      transform: scale(4);
+    }
+  </style>
+</head>
+<body>
+  <svg class="spinner spinner--play " width="16" height="16" viewBox="0 0 16 16" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <clipPath id="spinner-clip">
+      <circle cx="8" cy="8" r="8" fill="white"></circle>
+    </clipPath>
+    <foreignObject width="16" height="16" clip-path="url(#spinner-clip)">
+      <div class="spinner-div"></div>
+    </foreignObject>
+  </svg>
+</body>
+</html>
