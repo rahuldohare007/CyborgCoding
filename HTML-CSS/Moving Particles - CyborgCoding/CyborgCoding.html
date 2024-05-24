@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyborgCoding - Moving Particles</title>
+  <style>
+    body {
+      background: #222;
+      height: 95vh;
+      display: grid;
+      place-items: center;
+    }
+
+    .rainbow {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      border-radius: 50%;
+    }
+
+    .rainbow svg {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rainbow">
+    <svg>
+      <defs>
+        <filter id="rainbow-filter">
+          <feGaussianBlur stdDeviation='8' alt="halo ring" />
+          <feOffset dx="2" dy="2" alt="offset" />
+          <feBlend in='SourceGraphic' alt="rainbow ring" />
+        </filter>
+        <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="red">
+            <animate attributeName="stop-color" values="red;orange;yellow;green;blue;indigo;violet;red" dur="8s"
+              repeatCount="indefinite" />
+          </stop>
+          <stop offset="100%" stop-color="violet">
+            <animate attributeName="stop-color" values="violet;red;orange;yellow;green;blue;indigo;violet" dur="8s"
+              repeatCount="indefinite" />
+          </stop>
+        </linearGradient>
+      </defs>
+      <circle cx="150" cy="150" r="125" fill="none" stroke="url(#rainbow-gradient)" stroke-width="20"
+        filter="url(#rainbow-filter)"></circle>
+    </svg>
+  </div>
+</body>
+
+</html>
