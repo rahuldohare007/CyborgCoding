@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyborgCoding - Wind</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background-image: linear-gradient(#111, #444);
+    }
+    p {
+      font-size: 3rem;
+      font-family: system-ui;
+      font-weight: 900;
+      color: lightblue;
+      -webkit-text-stroke: 2px SteelBlue;
+      position: relative;
+      line-height: 80%;
+      animation: skew 1s linear infinite;
+      transform-origin: 50% 100%;
+    }
+    @keyframes skew {
+      40% {
+        transform: skewX(-30deg);
+      }
+      50% {
+        transform: skewX(-20deg);
+      }
+      60% {
+        transform: skewX(-30deg);
+      }
+      100% {
+        transform: skewX(0deg);
+      }
+    }
+    .bubble {
+      aspect-ratio: 5/1;
+      background-color: lightblue;
+      box-sizing: border-box;
+      position: absolute;
+      left: -10px;
+      opacity: 0;
+      animation: drip 0.5s ease-in infinite;
+    }
+    @keyframes drip {
+      25% {
+        opacity: 0.75;
+      }
+      75% {
+        opacity: 0.75;
+      }
+      100% {
+        left: calc(100% + 10px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>CyborgCoding</p>
+  <script src="CyborgCoding.js"></script>
+</body>
+</html>
